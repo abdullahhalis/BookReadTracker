@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">BookReadTracker</string>
+
+    <string name="title_activity_status">Book Status</string>
+    <string name="title_activity_list">Book List</string>
+    <string name="title_activity_add">Add Book</string>
+    <string name="title_activity_detail">Book Detail</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="book_delete_success_message">Book deleted</string>
+    <string name="book_update_success_message">Book updated</string>
+
+    <!--    menu action string-->
+    <string name="action_showList">Show List</string>
+    <string name="action_status">Reading Status</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_delete_book">Delete Book</string>
+    <string name="action_insert">Insert</string>
+    <string name="action_sort_date_added">Sort by date added</string>
+    <string name="action_sort_title">Sort by title</string>
+    <string name="action_sort_genre">Sort by genre</string>
+    <string name="action_sort_author">Sort by author</string>
+
+    <!--    item_book_list.xml-->
+    <string name="total_pages">%1d pages</string>
+
+    <!--    activity_list_book.xml-->
+    <string name="empty_book_list">No book have been added, please add some books first!</string>
+    <string name="add_book">Add a book</string>
+
+    <!--    activity_add_book.xml-->
+    <string name="book_title_hint">Title</string>
+    <string name="book_genre_hint">Genre</string>
+    <string name="book_totalPage_hint">Total page</string>
+    <string name="book_author_hint">Author</string>
+    <string name="book_status_hint">Status</string>
+    <string name="book_readingProgress_hint">Reading Progress</string>
+    <string name="book_personalNote_hint">Personal Note</string>
+    <string name="invalid_reading_progress_input_message">Invalid! Reading progress greater than total page</string>
+    <string name="invalid_input_data_not_filled_message">Please fill in the Title, Genre, Total Page, and Author field</string>
+    <string name="update">Update</string>
+
+    <!--    activity_detail_book.xml-->
+    <string name="book_title">Title</string>
+    <string name="book_genre">Genre</string>
+    <string name="book_totalPage">Total Page</string>
+    <string name="book_author">Author</string>
+    <string name="book_addedAt">Added at</string>
+    <string name="book_readingStatus">Reading Status</string>
+    <string name="book_readingProgress">Reading Progress</string>
+    <string name="book_personalNote">Personal Note</string>
+
+    <!--    DetailBookActivity-->
+    <string name="delete_alert">Delete this book?</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+
+    <!--    currently_read_book_item.xml-->
+    <string name="reading_progress_label">Reading Progress</string>
+    <string name="reading_progress_value">%1d%%</string>
+
+    <!--    currently_read_view.xml-->
+    <string name="empty_currently_read_book_label">There are no currently read book</string>
+
+    <!--    Notification-->
+    <string name="notification_title">You have %1d currently read book</string>
+    <string name="notification_subtitle">Come back to the app to update your book reading progress!</string>
+    <string name="notification_subtitle_no_book">Come back to the app to add some book to read!</string>
+
+    <string name="reminder_header">Reminder</string>
+    <string name="pref_key_notify">key_notification</string>
+    <string name="pref_notify_summary">Daily reminder for currently read book.</string>
+    <string name="pref_notify_name">Notification</string>
+
+    <string name="display_header">Display</string>
+    <string name="pref_dark_title">Dark mode</string>
+    <string name="pref_key_dark" translatable="false">key_dark_mode</string>
+    <string name="pref_dark_auto" translatable="false">auto</string>
+    <string name="pref_dark_on" translatable="false">on</string>
+    <string name="pref_dark_off" translatable="false">off</string>
+    <string name="dark_mode_auto">Automatic</string>
+    <string name="dark_mode_on">Dark mode</string>
+    <string name="dark_mode_off">Light mode</string>
+</resources>

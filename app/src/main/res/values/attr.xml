@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="customTabLayoutBackgroundColor" format="reference" />
+    <attr name="customTabLayoutFontColorSelected" format="reference" />
+    <attr name="customTabLayoutFontColorNotSelected" format="reference" />
+    <attr name="customDividerColorForTabLayout" format="reference" />
+</resources>

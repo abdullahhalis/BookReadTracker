@@ -1,0 +1,114 @@
+{
+  "books": [
+    {
+      "id": 9001,
+      "title": "Deep Learning with Python",
+      "genre": "Technology",
+      "totalPage": 384,
+      "author": "François Chollet",
+      "status": "Currently Reading",
+      "readingProgress": 120,
+      "personalNote": "Exploring neural networks.",
+      "bookAddedInMillis": 1693507200000
+    },
+    {
+      "id": 9002,
+      "title": "The Midnight Library",
+      "genre": "Fiction",
+      "totalPage": 304,
+      "author": "Matt Haig",
+      "status": "Finished Reading",
+      "readingProgress": 304,
+      "personalNote": "Thought-provoking and moving.",
+      "bookAddedInMillis": 1689542400000
+    },
+    {
+      "id": 9003,
+      "title": "Atomic Habits",
+      "genre": "Self-Help",
+      "totalPage": 320,
+      "author": "James Clear",
+      "status": "Want to Read",
+      "readingProgress": 0,
+      "personalNote": "Recommended by many productivity gurus.",
+      "bookAddedInMillis": 1684713600000
+    },
+    {
+      "id": 9004,
+      "title": "The Silent Patient",
+      "genre": "Thriller",
+      "totalPage": 336,
+      "author": "Alex Michaelides",
+      "status": "Currently Reading",
+      "readingProgress": 90,
+      "personalNote": "",
+      "bookAddedInMillis": 1694025600000
+    },
+    {
+      "id": 9005,
+      "title": "Educated",
+      "genre": "Memoir",
+      "totalPage": 352,
+      "author": "Tara Westover",
+      "status": "Want to Read",
+      "readingProgress": 0,
+      "personalNote": "Curious about her journey.",
+      "bookAddedInMillis": 1682121600000
+    },
+    {
+      "id": 9006,
+      "title": "Dune",
+      "genre": "Science Fiction",
+      "totalPage": 688,
+      "author": "Frank Herbert",
+      "status": "Finished Reading",
+      "readingProgress": 688,
+      "personalNote": "A dense but rewarding read.",
+      "bookAddedInMillis": 1685913600000
+    },
+    {
+      "id": 9007,
+      "title": "Becoming",
+      "genre": "Autobiography",
+      "totalPage": 448,
+      "author": "Michelle Obama",
+      "status": "Want to Read",
+      "readingProgress": 0,
+      "personalNote": "Heard great things about it.",
+      "bookAddedInMillis": 1679980800000
+    },
+    {
+      "id": 9008,
+      "title": "The Power of Now",
+      "genre": "Spirituality",
+      "totalPage": 229,
+      "author": "Eckhart Tolle",
+      "status": "Currently Reading",
+      "readingProgress": 110,
+      "personalNote": "",
+      "bookAddedInMillis": 1694112000000
+    },
+    {
+      "id": 9009,
+      "title": "Project Hail Mary",
+      "genre": "Science Fiction",
+      "totalPage": 496,
+      "author": "Andy Weir",
+      "status": "Finished Reading",
+      "readingProgress": 496,
+      "personalNote": "Couldn't put it down!",
+      "bookAddedInMillis": 1688592000000
+    },
+    {
+      "id": 9010,
+      "title": "Ikigai",
+      "genre": "Philosophy",
+      "totalPage": 208,
+      "author": "Héctor García & Francesc Miralles",
+      "status": "Want to Read",
+      "readingProgress": 0,
+      "personalNote": "Short and inspiring.",
+      "bookAddedInMillis": 1678665600000
+    }
+  ]
+}

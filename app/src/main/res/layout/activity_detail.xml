@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detailActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.detail.DetailActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/appbar_detailActivity"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:theme="@style/Theme.BookReadTracker.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_detailActivity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:popupTheme="@style/Theme.BookReadTracker.PopupOverlay"/>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <LinearLayout
+      android:id="@+id/vg_detail_content"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:padding="20dp"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TextView
+        android:id="@+id/tv_bookTitleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="@string/book_title"
+        app:drawableStartCompat="@drawable/ic_book" />
+
+    <TextView
+        android:id="@+id/tv_bookTitleValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_bookGenreLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="@string/book_genre"
+        app:drawableStartCompat="@drawable/ic_genre"/>
+
+    <TextView
+        android:id="@+id/tv_bookGenreValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_bookTotalPageLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="@string/book_totalPage"
+        app:drawableStartCompat="@drawable/ic_page_number"/>
+
+    <TextView
+        android:id="@+id/tv_bookTotalPageValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        tools:text="@tools:sample/us_zipcodes" />
+
+    <TextView
+        android:id="@+id/tv_bookAuthorLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="@string/book_author"
+        app:drawableStartCompat="@drawable/ic_author"/>
+
+    <TextView
+        android:id="@+id/tv_bookAuthorValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        tools:text="@tools:sample/lorem" />
+
+    <TextView
+        android:id="@+id/tv_bookAddedAtLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="@string/book_addedAt"
+        app:drawableStartCompat="@drawable/ic_book_added_date"/>
+
+    <TextView
+        android:id="@+id/tv_bookAddedAtValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="16sp"
+        tools:text="@tools:sample/date/ddmmyy" />
+
+    <TextView
+        android:id="@+id/tv_bookStatusLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:text="@string/book_readingStatus"
+        app:drawableStartCompat="@drawable/ic_book_status"/>
+
+    <Spinner
+        android:id="@+id/spinner_bookStatusValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginStart="34dp"
+        android:layout_marginBottom="20dp"
+        android:padding="0dp"
+        android:background="@drawable/background_spinner"
+        tools:text="Want to Read" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_readingProgress_detail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/book_readingProgress_hint">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/tiet_readingProgress_detail"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:inputType="number"
+          tools:text="0" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_personalNote_detail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:hint="@string/book_personalNote_hint">
+
+      <com.google.android.material.textfield.TextInputEditText
+          android:id="@+id/tiet_personalNote_detail"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          tools:text="@tools:sample/lorem" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="?android:colorPrimary"
+        android:text="@string/update"
+        android:textColor="@color/white" />
+  </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
