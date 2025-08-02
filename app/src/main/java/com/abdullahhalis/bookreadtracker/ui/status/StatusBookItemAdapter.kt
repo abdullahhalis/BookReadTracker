@@ -3,6 +3,7 @@ package com.abdullahhalis.bookreadtracker.ui.status
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.abdullahhalis.bookreadtracker.R
 import com.abdullahhalis.bookreadtracker.data.Book
 import com.abdullahhalis.bookreadtracker.databinding.ListBookItemBinding
 
@@ -28,7 +29,7 @@ class StatusBookItemAdapter(
                 tvBookTitle.text = book.title
                 tvBookGenre.text = book.genre
                 tvBookAuthor.text = book.author
-                tvBookTotalPages.text = "${book.totalPage}"
+                tvBookTotalPages.text = itemView.context.getString(R.string.total_pages, book.totalPage)
                 root.setOnClickListener { clickListener(book) }
             }
         }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sort_date_added"
+        android:title="@string/action_sort_date_added"/>
+
+    <item
+        android:id="@+id/sort_title"
+        android:title="@string/action_sort_title"/>
+
+    <item
+        android:id="@+id/sort_genre"
+        android:title="@string/action_sort_genre"/>
+
+    <item
+        android:id="@+id/sort_author"
+        android:title="@string/action_sort_author"/>
+</menu>

@@ -13,6 +13,7 @@ import com.abdullahhalis.bookreadtracker.R
 import com.abdullahhalis.bookreadtracker.data.Book
 import com.abdullahhalis.bookreadtracker.databinding.ActivityMainBinding
 import com.abdullahhalis.bookreadtracker.ui.detail.DetailActivity
+import com.abdullahhalis.bookreadtracker.ui.list.ListBookActivity
 import com.abdullahhalis.bookreadtracker.ui.status.StatusBookActivity
 import com.abdullahhalis.bookreadtracker.util.BOOK_ID
 import com.abdullahhalis.bookreadtracker.util.ViewModelFactory
@@ -53,6 +54,11 @@ class MainActivity : AppCompatActivity() {
         return when(item.itemId) {
             R.id.action_status -> {
                 val intent = Intent(this, StatusBookActivity::class.java)
+                startActivity(intent)
+                true
+            }
+            R.id.action_list -> {
+                val intent = Intent(this, ListBookActivity::class.java)
                 startActivity(intent)
                 true
             }

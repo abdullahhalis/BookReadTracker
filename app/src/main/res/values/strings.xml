@@ -28,6 +28,7 @@
     <!--    activity_list_book.xml-->
     <string name="empty_book_list">No book have been added, please add some books first!</string>
     <string name="add_book">Add a book</string>
+    <string name="undo">Undo</string>
 
     <!--    activity_add_book.xml-->
     <string name="book_title_hint">Title</string>
