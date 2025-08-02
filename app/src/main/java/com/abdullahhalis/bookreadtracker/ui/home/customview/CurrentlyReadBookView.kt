@@ -1,4 +1,4 @@
-package com.abdullahhalis.bookreadtracker.ui.customview
+package com.abdullahhalis.bookreadtracker.ui.home.customview
 
 import android.content.Context
 import android.util.AttributeSet
@@ -21,7 +21,8 @@ class CurrentlyReadBookView @JvmOverloads constructor(context: Context, attrs: A
     }
 
     fun setAdapterItemClickCallback(onItemClick: (Book) -> Unit) {
-        currentlyReadBookAdapter.setOnItemClickCallback(object : CurrentlyReadBookAdapter.OnItemClickCallBack{
+        currentlyReadBookAdapter.setOnItemClickCallback(object :
+            CurrentlyReadBookAdapter.OnItemClickCallBack {
             override fun onItemClicked(book: Book) {
                 onItemClick.invoke(book)
             }

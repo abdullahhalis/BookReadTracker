@@ -1,4 +1,4 @@
-package com.abdullahhalis.bookreadtracker.ui.customview
+package com.abdullahhalis.bookreadtracker.ui.home.customview
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -15,30 +15,15 @@ class CurrentlyReadBookAdapter: ListAdapter<Book, CurrentlyReadBookAdapter.ViewH
     private var listBook = ArrayList<Book>()
     private lateinit var onItemClickCallBack: OnItemClickCallBack
 
-    inner class ViewHolder internal constructor(private val itemViewBinding: CurrentlyReadBookItemBinding) : RecyclerView.ViewHolder(itemViewBinding.root) {
-        fun bind(book: Book) {
-            val readingProgressInPercentage = floor((book.readingProgress.toDouble() / book.totalPage.toDouble()) * 100).toInt()
-            itemViewBinding.apply {
-                tvBookTitle.text = book.title
-                tvBookGenre.text = book.genre
-                tvReadingProgressValue.text = itemView.context.resources.getString(R.string.reading_progress_value, readingProgressInPercentage)
-                pbReadingProgress.progress = readingProgressInPercentage
-                itemView.setOnClickListener{
-                    onItemClickCallBack.onItemClicked(book)
-                }
-            }
-        }
-    }
-
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): CurrentlyReadBookAdapter.ViewHolder {
+    ): ViewHolder {
         val binding = CurrentlyReadBookItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: CurrentlyReadBookAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(listBook[position])
     }
 
@@ -57,6 +42,22 @@ class CurrentlyReadBookAdapter: ListAdapter<Book, CurrentlyReadBookAdapter.ViewH
     interface OnItemClickCallBack {
         fun onItemClicked(book: Book)
     }
+
+    inner class ViewHolder internal constructor(private val itemViewBinding: CurrentlyReadBookItemBinding) : RecyclerView.ViewHolder(itemViewBinding.root) {
+        fun bind(book: Book) {
+            val readingProgressInPercentage = floor((book.readingProgress.toDouble() / book.totalPage.toDouble()) * 100).toInt()
+            itemViewBinding.apply {
+                tvBookTitle.text = book.title
+                tvBookGenre.text = book.genre
+                tvReadingProgressValue.text = itemView.context.resources.getString(R.string.reading_progress_value, readingProgressInPercentage)
+                pbReadingProgress.progress = readingProgressInPercentage
+                itemView.setOnClickListener{
+                    onItemClickCallBack.onItemClicked(book)
+                }
+            }
+        }
+    }
+
 
     companion object {
         private val DIFF_CALLBACK = object : DiffUtil.ItemCallback<Book>() {

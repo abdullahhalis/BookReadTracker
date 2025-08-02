@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.abdullahhalis.bookreadtracker.data.BookRepository
 import com.abdullahhalis.bookreadtracker.ui.detail.DetailViewModel
 import com.abdullahhalis.bookreadtracker.ui.home.MainViewModel
+import com.abdullahhalis.bookreadtracker.ui.status.StatusBookViewModel
 
 class ViewModelFactory private constructor(private val bookRepository: BookRepository): ViewModelProvider.Factory{
     @Suppress("UNCHECKED_CAST")
@@ -13,6 +14,7 @@ class ViewModelFactory private constructor(private val bookRepository: BookRepos
         when {
             modelClass.isAssignableFrom(MainViewModel::class.java) -> MainViewModel(bookRepository) as T
             modelClass.isAssignableFrom(DetailViewModel::class.java) -> DetailViewModel(bookRepository) as T
+            modelClass.isAssignableFrom(StatusBookViewModel::class.java) -> StatusBookViewModel(bookRepository) as T
             else -> throw Throwable("Unknown Viewmodel Class: " + modelClass.name)
         }
 

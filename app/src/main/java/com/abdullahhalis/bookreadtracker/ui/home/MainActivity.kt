@@ -13,12 +13,13 @@ import com.abdullahhalis.bookreadtracker.R
 import com.abdullahhalis.bookreadtracker.data.Book
 import com.abdullahhalis.bookreadtracker.databinding.ActivityMainBinding
 import com.abdullahhalis.bookreadtracker.ui.detail.DetailActivity
+import com.abdullahhalis.bookreadtracker.ui.status.StatusBookActivity
 import com.abdullahhalis.bookreadtracker.util.BOOK_ID
 import com.abdullahhalis.bookreadtracker.util.ViewModelFactory
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private val mainViewModel: MainViewModel by viewModels { ViewModelFactory.getInstance(this) }
+    private val viewModel: MainViewModel by viewModels { ViewModelFactory.getInstance(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
 
-            mainViewModel.listOfCurrentlyReadBook.observe(this@MainActivity) { books ->
+            viewModel.listOfCurrentlyReadBook.observe(this@MainActivity) { books ->
                 customCurrentlyReadBookView.submitData(books)
             }
         }
@@ -50,6 +51,11 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when(item.itemId) {
+            R.id.action_status -> {
+                val intent = Intent(this, StatusBookActivity::class.java)
+                startActivity(intent)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }

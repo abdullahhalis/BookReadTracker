@@ -1,7 +1,6 @@
 package com.abdullahhalis.bookreadtracker.ui.detail
 
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -24,7 +23,7 @@ import com.abdullahhalis.bookreadtracker.util.toBookStatusType
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
-    private val detailViewModel: DetailViewModel by viewModels { ViewModelFactory.getInstance(this) }
+    private val viewModel: DetailViewModel by viewModels { ViewModelFactory.getInstance(this) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -41,9 +40,9 @@ class DetailActivity : AppCompatActivity() {
         supportActionBar?.setDisplayShowHomeEnabled(true)
 
         val bookId = intent.getIntExtra(BOOK_ID, 0)
-        detailViewModel.setBookId(bookId)
+        viewModel.setBookId(bookId)
 
-        detailViewModel.book.observe(this) { book ->
+        viewModel.book.observe(this) { book ->
             book?.let {
                 with(book) {
                     binding.apply {
@@ -62,7 +61,7 @@ class DetailActivity : AppCompatActivity() {
                 }
             }
         }
-        detailViewModel.updated.observe(this) { event ->
+        viewModel.updated.observe(this) { event ->
             val updated = event.getContentIfNotHandled()
 
             if (updated == true) {
@@ -74,7 +73,7 @@ class DetailActivity : AppCompatActivity() {
             }
         }
 
-        detailViewModel.deleted.observe(this) { event ->
+        viewModel.deleted.observe(this) { event ->
             val deleted = event.getContentIfNotHandled()
 
             if (deleted == true) {
@@ -130,15 +129,14 @@ class DetailActivity : AppCompatActivity() {
             }
             btnUpdate.setOnClickListener {
                 val newStatus = spinnerBookStatusValue.selectedItem.toString().toBookStatusType()
-                var newReadingProgress = 0
                 val newPersonalNote = tietPersonalNoteDetail.text.toString()
 
-                when(newStatus) {
-                    BookStatusType.WANT_TO_READ -> newReadingProgress = 0
-                    BookStatusType.FINISHED_READING -> newReadingProgress = detailViewModel.book.value?.totalPage ?: 0
-                    BookStatusType.CURRENTLY_READING -> newReadingProgress = tietReadingProgressDetail.text.toString().toIntOrNull() ?: 0
+                val newReadingProgress = when(newStatus) {
+                    BookStatusType.WANT_TO_READ -> 0
+                    BookStatusType.FINISHED_READING -> viewModel.book.value?.totalPage ?: 0
+                    BookStatusType.CURRENTLY_READING -> tietReadingProgressDetail.text.toString().toIntOrNull() ?: 0
                 }
-                detailViewModel.updateBook(newStatus.value, newReadingProgress, newPersonalNote)
+                viewModel.updateBook(newStatus.value, newReadingProgress, newPersonalNote)
             }
         }
     }
@@ -155,7 +153,7 @@ class DetailActivity : AppCompatActivity() {
                     setMessage(getString(R.string.delete_alert))
                     setNegativeButton(getString(R.string.no), null)
                     setPositiveButton(getString(R.string.yes)) { _, _ ->
-                        detailViewModel.deleteBook()
+                        viewModel.deleteBook()
                     }
                     show()
                 }

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.home.MainActivity">
 
-    <com.abdullahhalis.bookreadtracker.ui.customview.CurrentlyReadBookView
+    <com.abdullahhalis.bookreadtracker.ui.home.customview.CurrentlyReadBookView
         android:id="@+id/customCurrentlyReadBookView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

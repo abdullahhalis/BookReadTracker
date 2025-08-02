@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BookReadTracker</string>
+    <string name="app_name">Book Read Tracker</string>
 
     <string name="title_activity_status">Book Status</string>
     <string name="title_activity_list">Book List</string>
