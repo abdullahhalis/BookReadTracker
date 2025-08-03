@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.abdullahhalis.bookreadtracker.data.BookRepository
+import com.abdullahhalis.bookreadtracker.ui.add.AddBookViewModel
 import com.abdullahhalis.bookreadtracker.ui.detail.DetailViewModel
 import com.abdullahhalis.bookreadtracker.ui.home.MainViewModel
 import com.abdullahhalis.bookreadtracker.ui.list.ListBookViewModel
@@ -17,6 +18,7 @@ class ViewModelFactory private constructor(private val bookRepository: BookRepos
             modelClass.isAssignableFrom(DetailViewModel::class.java) -> DetailViewModel(bookRepository) as T
             modelClass.isAssignableFrom(StatusBookViewModel::class.java) -> StatusBookViewModel(bookRepository) as T
             modelClass.isAssignableFrom(ListBookViewModel::class.java) -> ListBookViewModel(bookRepository) as T
+            modelClass.isAssignableFrom(AddBookViewModel::class.java) -> AddBookViewModel(bookRepository) as T
             else -> throw Throwable("Unknown Viewmodel Class: " + modelClass.name)
         }
 

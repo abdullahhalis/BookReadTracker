@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.abdullahhalis.bookreadtracker.R
 import com.abdullahhalis.bookreadtracker.data.Book
 import com.abdullahhalis.bookreadtracker.databinding.ActivityListBookBinding
+import com.abdullahhalis.bookreadtracker.ui.add.AddBookActivity
 import com.abdullahhalis.bookreadtracker.ui.detail.DetailActivity
 import com.abdullahhalis.bookreadtracker.util.BOOK_ID
 import com.abdullahhalis.bookreadtracker.util.BookSortType
@@ -56,7 +57,10 @@ class ListBookActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(this@ListBookActivity)
         }
 
-        binding.fabAddBook.setOnClickListener{}
+        binding.fabAddBook.setOnClickListener{
+            val intent = Intent(this, AddBookActivity::class.java)
+            startActivity(intent)
+        }
 
         viewModel.books.observe(this) { books ->
             listBookAdapter.submitData(lifecycle, books)

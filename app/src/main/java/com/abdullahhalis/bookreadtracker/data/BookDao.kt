@@ -29,7 +29,7 @@ interface BookDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertBook(book: Book) : Long
 
-    @Query("SELECT * FROM book WHERE id = :id ORDER BY bookAddedInMillis DESC")
+    @Query("SELECT * FROM book WHERE id = :id")
     fun getBook(id: Int): LiveData<Book?>
 
     @Update

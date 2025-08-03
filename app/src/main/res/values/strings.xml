@@ -41,6 +41,7 @@
     <string name="invalid_reading_progress_input_message">Invalid! Reading progress greater than total page</string>
     <string name="invalid_input_data_not_filled_message">Please fill in the Title, Genre, Total Page, and Author field</string>
     <string name="update">Update</string>
+    <string name="success_added_book">Book successfully added</string>
 
     <!--    activity_detail_book.xml-->
     <string name="book_title">Title</string>
