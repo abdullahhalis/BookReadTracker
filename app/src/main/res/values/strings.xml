@@ -69,6 +69,8 @@
     <string name="notification_title">You have %1d currently read book</string>
     <string name="notification_subtitle">Come back to the app to update your book reading progress!</string>
     <string name="notification_subtitle_no_book">Come back to the app to add some book to read!</string>
+    <string name="notifications_permission_granted">Notifications permission granted</string>
+    <string name="notifications_permission_denied">Notifications permission denied</string>
 
     <string name="reminder_header">Reminder</string>
     <string name="pref_key_notify">key_notification</string>

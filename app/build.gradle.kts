@@ -45,6 +45,7 @@ dependencies {
 
     implementation(libs.androidx.room.ktx)
     implementation(libs.androidx.room.runtime.android)
+    implementation(libs.androidx.preference)
     ksp(libs.room.compiler)
 
     implementation(libs.androidx.paging.runtime.ktx)

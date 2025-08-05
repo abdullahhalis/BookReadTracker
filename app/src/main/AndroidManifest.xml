@@ -2,7 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
+        android:name=".BookReadTracker"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,9 +18,14 @@
         android:theme="@style/Theme.BookReadTracker"
         tools:targetApi="31">
         <activity
+            android:name=".ui.setting.SettingActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".ui.home.MainActivity"/>
+        <activity
             android:name=".ui.add.AddBookActivity"
             android:exported="false"
-            android:theme="@style/Theme.BookReadTracker.NoActionBar"/>
+            android:theme="@style/Theme.BookReadTracker.NoActionBar" />
         <activity
             android:name=".ui.list.ListBookActivity"
             android:exported="false"
@@ -37,6 +47,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".notification.DailyReminder"
+            android:enabled="true"
+            android:exported="false"/>
     </application>
 
 </manifest>
